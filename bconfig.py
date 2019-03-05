@@ -104,6 +104,7 @@ models_by_desc = [
     {'APC Web/SNMP': 'APC-Smart-UPS'},
     {'QSW-8370': 'QSW-8370'},
     {'DGS-3000-28L': 'DGS-3000-28L'},
+    {'SNR-S2985G-24T': 'S2985G-24T'},
 ]
 
 # Sets of commands for 'snmpset' operation
@@ -116,6 +117,7 @@ PassSet = {
     60: ['UploadConf_1510'],
     72: ['UploadConf_3028'],
     96: ['UploadConf_3200_C'],
+    97: ['UploadConf_2985'],
     100: ['UpdatePortsDescriptions'],
     101: ['SaveConf'],
     144: ['UploadConf_3200_AB'],
@@ -177,6 +179,10 @@ oids_set = {
     'DGS-3000-28L': {
         'SaveConf': 'CfgSave',
     },
+    'S2985G-24T': {
+        'SaveConf': 'CfgSave',
+        'UploadConf_2985': 'CfgUpload',
+    },
 }
 
 oids_walk = [
@@ -191,6 +197,7 @@ oids_walk = [
         'DGS-3000-26TC': 'CNS',
         'DGS-1510-28LME': 'CNS',
         'DGS-3000-28L': 'CNS',
+        'S2985G-24T': 'CNS',
     },
     {
         'DES-3200-28': 'Errors',
@@ -203,6 +210,7 @@ oids_walk = [
         'DGS-3000-26TC': 'Errors',
         'DGS-1510-28LME': 'Errors',
         'DGS-3000-28L': 'Errors',
+        'S2985G-24T': 'Errors',
     },
     {
         'DES-3200-28': 'RxTx',
@@ -215,6 +223,7 @@ oids_walk = [
         'DGS-3000-26TC': 'RxTx',
         'DGS-1510-28LME': 'RxTx',
         'DGS-3000-28L': 'RxTx',
+        'S2985G-24T': 'RxTx',
     },
     {
         'DES-3200-28': 'DuplexStatus',
@@ -227,6 +236,7 @@ oids_walk = [
         'DGS-3000-26TC': 'DuplexStatus',
         'DGS-1510-28LME': 'DuplexStatus',
         'DGS-3000-28L': 'DuplexStatus',
+        'S2985G-24T': 'DuplexStatus',
     },
     {
         'DES-3200-28': 'sysUpTime',
@@ -239,6 +249,7 @@ oids_walk = [
         'DGS-3000-26TC': 'sysUpTime',
         'DGS-1510-28LME': 'sysUpTime',
         'DGS-3000-28L': 'sysUpTime',
+        'S2985G-24T': 'sysUpTime',
     },
     {
         'DES-3200-28': 'FWVer',
@@ -252,6 +263,7 @@ oids_walk = [
         'DGS-3000-26TC': 'FWVer',
         'DGS-1510-28LME': 'FWVer',
         'DGS-3000-28L': 'FWVer',
+        'S2985G-24T': 'FWVer',
     },
     {
         'DES-3200-10_C1': 'swTempCurr',
@@ -272,6 +284,7 @@ oids_walk = [
         'DGS-3000-26TC': 'CPUutil',
         'DGS-1510-28LME': 'CPUutil',
         'DGS-3000-28L': 'CPUutil',
+        'S2985G-24T': 'CPUutil',
     },
     {
         'DES-3200-28': 'P1L',
@@ -321,6 +334,7 @@ oids_walk = [
         'DGS-3000-26TC': 'DRAMutil',
         'DGS-1510-28LME': 'DRAMutil',
         'DGS-3000-28L': 'DRAMutil',
+        'S2985G-24T': 'DRAMutil',
     },
     {
         'DES-3028': 'FLASHutil',
@@ -347,5 +361,6 @@ oids_walk = [
         'DGS-3000-26TC': 'PORTutil',
         'DGS-1510-28LME': 'PORTutil',
         'DGS-3000-28L': 'PORTutil',
+        'S2985G-24T': 'PORTutil',
     },
 ]
